@@ -1,0 +1,115 @@
+{
+  "name": "Serfayz O'quv Markazi",
+  "address": "Bulun'gur tumani, Xalq banki yonida",
+  "phone": "+998 97 925 20 03",
+  "telegram": "@serfayzuz",
+  "working_hours": "Dushanbadan Shanbagacha 08:00 – 18:00",
+  "description": "Serfayz o'quv markazi – sifatli ta'lim va tajribali o'qituvchilar bilan o'quvchilarning kelajagini yaratishga yordam beramiz.",
+  "advantages": [
+    "Tajribali va sertifikatli o'qituvchilar",
+    "Kichik guruhlar (8–12 kishi)",
+    "Bepul sinov darsi",
+    "To'lovni bo'lib-bo'lib qilish imkoniyati",
+    "Zamonaviy o'quv materiallari va darsliklar",
+    "Qulay joylashuv va xavfsiz muhit",
+    "Yakshanba kunlari qiziqarli tadbirlar"
+  ],
+  "courses": [
+    {
+      "name": "Ingliz tili",
+      "levels": [
+        "Beginner",
+        "Elementary",
+        "Pre-Intermediate",
+        "Intermediate",
+        "Upper-Intermediate",
+        "Advanced"
+      ],
+      "duration": "6-9 oy",
+      "price": "300 000 – 380 000 so'm (guruhga qarab)",
+      "description": "Umumiy ingliz tili va IELTS tayyorgarlik kurslari"
+    },
+    {
+      "name": "Rus tili",
+      "levels": [
+        "Beginner",
+        "Elementary",
+        "Intermediate",
+        "Advanced"
+      ],
+      "duration": "6-9 oy",
+      "price": "300 000 – 350 000 so'm",
+      "description": "Boshlang'ichdan yuqori darajagacha rus tili"
+    },
+    {
+      "name": "Ona tili (O'zbek tili)",
+      "levels": [
+        "5–11 sinf"
+      ],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "300 000 so'm/oy",
+      "description": "O'zbek tili va adabiyoti darslari, imtihonlarga tayyorgarlik"
+    },
+    {
+      "name": "Matematika",
+      "levels": [
+        "5–11 sinf",
+        "DTM tayyorgarlik"
+      ],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "300 000 so'm/oy",
+      "description": "Maktab dasturi va DTM uchun chuqurlashtirilgan matematika"
+    },
+    {
+      "name": "Kimyo",
+      "levels": [
+        "7–11 sinf",
+        "DTM tayyorgarlik"
+      ],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "320 000 so'm/oy",
+      "description": "Kimyo fanidan chuqur o'qitish va tajriba darslari, imtihonlarga tayyorgarlik, Sertifikatlarga tayyorgarlik"
+    },
+    {
+      "name": "Biologiya",
+      "levels": [
+        "7–11 sinf",
+        "DTM tayyorgarlik"
+      ],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "320 000 so'm/oy",
+      "description": "Biologiya fanidan to'liq dastur va imtihonlarga tayyorgarlik va Sertifikatlarga tayyorgarlik"
+    },
+    {
+      "name": "Tarix",
+      "levels": [
+        "5–11 sinf",
+        "DTM tayyorgarlik"
+      ],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "300 000 so'm/oy",
+      "description": "O'zbekiston va jahon tarixi, DTM uchun tayyorgarlik"
+    },
+    {
+      "name": "Huquq",
+      "levels": [
+        "DTM tayyorgarlik"
+      ],
+      "duration": "6–9 oy",
+      "price": "300 000 so'm",
+      "description": "Huquqshunoslikka tayyorgarlik va asosiy huquqiy bilimlar"
+    },
+    {
+      "name": "Shaxmat",
+      "levels": [
+        "Boshlang'ich",
+        "O'rta",
+        "Professional"
+      ],
+      "duration": "3–12 oy",
+      "price": "250 000 – 300 000 so'm",
+      "description": "Shaxmat bo'yicha guruh va individual darslar. Yakshanba kunlari musobaqalar o'tkaziladi"
+    }
+  ],
+  "registration": "Ro'yxatdan o'tish uchun telefon raqamingizni yuboring yoki +998 97 925 20 03 ga qo'ng'iroq qiling. Shuningdek, bepul sinov darsiga yozilishingiz mumkin!"
+}

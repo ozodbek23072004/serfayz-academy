@@ -1,0 +1,245 @@
+{
+  "academy": {
+    "name": "Serfayz O'quv Markazi",
+    "slogan": "Kelajak Bugundan Boshlanadi",
+    "description": "Serfayz o'quv markazi – sifatli ta'lim va tajribali o'qituvchilar bilan o'quvchilarning kelajagini yaratishga yordam beramiz.",
+    "address": "Bulun'gur tumani, Xalq banki yonida",
+    "phone": "+998 97 925 20 03",
+    "telegram": "@serfayzuz",
+    "telegram_link": "https://t.me/serfayztv",
+    "instagram": "@serfayztv",
+    "instagram_link": "https://www.instagram.com/serfayztv",
+    "website": "serfayz.uz",
+    "working_hours": "Dushanbadan Shanbagacha 08:00 – 18:00",
+    "group_size": "Kichik guruhlar (8–12 kishi)",
+    "schedule_info": "Dars jadvali o'quvchi bilan kelishilgan holda qo'yiladi — ertalabki yoki kechki guruhlardan birini tanlash mumkin",
+    "payment_methods": ["Naqd pul", "Click", "Payme", "Bank kartasi"],
+    "payment_info": "Naqd pul, Click, Payme yoki istalgan bank kartasi orqali to'lash mumkin. Bo'lib-bo'lib to'lash imkoniyati ham mavjud.",
+    "teachers_info": "Barcha o'qituvchilar o'z fanlari bo'yicha milliy sertifikatga ega tajribali mutaxassislar.",
+    "age_limit": "Yosh chegarasi yo'q — barcha yoshdagilar qabul qilinadi"
+  },
+
+  "advantages": [
+    "Tajribali va milliy sertifikatli o'qituvchilar",
+    "Kichik guruhlar (8–12 kishi) — har biriga alohida e'tibor",
+    "Bepul sinov darsi",
+    "To'lovni bo'lib-bo'lib qilish imkoniyati",
+    "Dars jadvali kelishilgan holda — ertalabki yoki kechki guruhlar",
+    "Zamonaviy o'quv materiallari va darsliklar",
+    "Qulay joylashuv va xavfsiz muhit",
+    "Yosh chegarasi yo'q — barcha yoshdagilar qabul qilinadi",
+    "Yakshanba kunlari qiziqarli tadbirlar"
+  ],
+
+  "courses": [
+    {
+      "id": "english",
+      "name": "Ingliz tili",
+      "tag": "IELTS Focus",
+      "levels": ["Beginner", "Elementary", "Pre-Intermediate", "Intermediate", "Upper-Intermediate", "Advanced"],
+      "duration": "6-9 oy",
+      "price": "300 000 – 380 000 so'm (guruhga qarab)",
+      "description": "Umumiy ingliz tili va IELTS tayyorgarlik kurslari",
+      "schedule": "Kelishilgan holda — ertalabki yoki kechki guruh",
+      "teacher": "Milliy sertifikatli ingliz tili o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q"
+    },
+    {
+      "id": "russian",
+      "name": "Rus tili",
+      "tag": "Beginner → Advanced",
+      "levels": ["Beginner", "Elementary", "Intermediate", "Advanced"],
+      "duration": "6-9 oy",
+      "price": "300 000 – 350 000 so'm",
+      "description": "Boshlang'ichdan yuqori darajagacha rus tili",
+      "schedule": "Kelishilgan holda — ertalabki yoki kechki guruh",
+      "teacher": "Milliy sertifikatli rus tili o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q"
+    },
+    {
+      "id": "uzbek",
+      "name": "Ona tili (O'zbek tili)",
+      "tag": "5–11 sinf",
+      "levels": ["5–11 sinf"],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "300 000 so'm/oy",
+      "description": "O'zbek tili va adabiyoti darslari, imtihonlarga tayyorgarlik",
+      "schedule": "Kelishilgan holda — ertalabki yoki kechki guruh",
+      "teacher": "Milliy sertifikatli ona tili o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q"
+    },
+    {
+      "id": "math",
+      "name": "Matematika",
+      "tag": "DTM Tayyorlik",
+      "levels": ["5–11 sinf", "DTM tayyorgarlik"],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "300 000 so'm/oy",
+      "description": "Maktab dasturi va DTM uchun chuqurlashtirilgan matematika",
+      "schedule": "Kelishilgan holda — ertalabki yoki kechki guruh",
+      "teacher": "Milliy sertifikatli matematika o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q"
+    },
+    {
+      "id": "chemistry",
+      "name": "Kimyo",
+      "tag": "DTM + Sertifikat",
+      "levels": ["7–11 sinf", "DTM tayyorgarlik"],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "320 000 so'm/oy",
+      "description": "Kimyo fanidan chuqur o'qitish va tajriba darslari, imtihonlarga tayyorgarlik, sertifikatlarga tayyorgarlik",
+      "schedule": "Kelishilgan holda — ertalabki yoki kechki guruh",
+      "teacher": "Milliy sertifikatli kimyo o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q"
+    },
+    {
+      "id": "biology",
+      "name": "Biologiya",
+      "tag": "DTM + Sertifikat",
+      "levels": ["7–11 sinf", "DTM tayyorgarlik"],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "320 000 so'm/oy",
+      "description": "Biologiya fanidan to'liq dastur va imtihonlarga tayyorgarlik, sertifikatlarga tayyorgarlik",
+      "schedule": "Kelishilgan holda — ertalabki yoki kechki guruh",
+      "teacher": "Milliy sertifikatli biologiya o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q"
+    },
+    {
+      "id": "history",
+      "name": "Tarix",
+      "tag": "DTM Tayyorlik",
+      "levels": ["5–11 sinf", "DTM tayyorgarlik"],
+      "duration": "1 yil yoki mavsumiy",
+      "price": "300 000 so'm/oy",
+      "description": "O'zbekiston va jahon tarixi, DTM uchun tayyorgarlik",
+      "schedule": "Kelishilgan holda — ertalabki yoki kechki guruh",
+      "teacher": "Milliy sertifikatli tarix o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q"
+    },
+    {
+      "id": "law",
+      "name": "Huquq",
+      "tag": "DTM Tayyorlik",
+      "levels": ["DTM tayyorgarlik"],
+      "duration": "6–9 oy",
+      "price": "300 000 so'm/oy",
+      "description": "Huquqshunoslikka tayyorgarlik va asosiy huquqiy bilimlar",
+      "schedule": "Kelishilgan holda — ertalabki yoki kechki guruh",
+      "teacher": "Milliy sertifikatli huquq o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q"
+    },
+    {
+      "id": "chess",
+      "name": "Shaxmat",
+      "tag": "Guruh + Individual",
+      "levels": ["Boshlang'ich", "O'rta", "Professional"],
+      "duration": "3–12 oy",
+      "price": "250 000 – 300 000 so'm",
+      "description": "Shaxmat bo'yicha guruh va individual darslar. Yakshanba kunlari musobaqalar o'tkaziladi",
+      "schedule": "Kelishilgan holda + Yakshanba musobaqalar",
+      "teacher": "Milliy sertifikatli shaxmat o'qituvchisi",
+      "age_limit": "Yosh chegarasi yo'q — kichik bolalardan kattalargacha"
+    }
+  ],
+
+  "faq": [
+    {
+      "question": "Manzil qayerda?",
+      "answer": "Bulun'gur tumani, Xalq banki yonida."
+    },
+    {
+      "question": "Telefon raqami?",
+      "answer": "+998 97 925 20 03"
+    },
+    {
+      "question": "Telegram yoki Instagram bormi?",
+      "answer": "Ha! Telegram: https://t.me/serfayztv (@serfayzuz), Instagram: https://www.instagram.com/serfayztv (@serfayztv)."
+    },
+    {
+      "question": "Ish vaqtlari?",
+      "answer": "Dushanbadan Shanbagacha 08:00 – 18:00. Yakshanba kuni tadbirlar bo'ladi."
+    },
+    {
+      "question": "Guruhda nechta o'quvchi bo'ladi?",
+      "answer": "Bir guruhda 8 dan 12 gacha o'quvchi. Kichik guruhlar tufayli har biriga alohida e'tibor beriladi."
+    },
+    {
+      "question": "Dars jadvali qanday qo'yiladi?",
+      "answer": "Dars jadvali o'quvchi bilan kelishilgan holda qo'yiladi. Ertalabki yoki kechki guruhlardan birini tanlash mumkin."
+    },
+    {
+      "question": "Ertalabki yoki kechki guruhlar bormi?",
+      "answer": "Ha, ikkalasi ham bor. Qulay vaqtni siz bilan kelishib olamiz."
+    },
+    {
+      "question": "Yosh chegarasi bormi?",
+      "answer": "Yosh chegarasi yo'q — barcha yoshdagilar qabul qilinadi."
+    },
+    {
+      "question": "O'qituvchilar haqida?",
+      "answer": "Barcha o'qituvchilarimiz o'z fanlari bo'yicha milliy sertifikatga ega tajribali mutaxassislar."
+    },
+    {
+      "question": "To'lovni qanday qilsam bo'ladi?",
+      "answer": "Naqd pul, Click, Payme yoki istalgan bank kartasi orqali to'lash mumkin. Bo'lib-bo'lib to'lash imkoniyati ham mavjud."
+    },
+    {
+      "question": "Click yoki Payme orqali to'lasa bo'ladimi?",
+      "answer": "Ha, albatta! Naqd pul, Click, Payme va bank kartasi — hammasi qabul qilinadi."
+    },
+    {
+      "question": "Oilaviy chegirma bormi?",
+      "answer": "Ha! Bir oiladan bir nechta farzand qatnashsa, yil oxirigacha barcha farzandlarga 10% chegirma beriladi."
+    },
+    {
+      "question": "Kursga qanday yozilaman?",
+      "answer": "Telefon raqamingizni qoldiring yoki +998 97 925 20 03 ga qo'ng'iroq qiling. Telegram: https://t.me/serfayztv. Birinchi sinov dars bepul!"
+    },
+    {
+      "question": "Birinchi dars bepulmi?",
+      "answer": "Ha, barcha yo'nalishlar bo'yicha birinchi sinov darsi mutlaqo bepul."
+    },
+    {
+      "question": "Kurs narxlari?",
+      "answer": "Ingliz tili: 300 000–380 000 so'm | Rus tili: 300 000–350 000 so'm | Matematika, Tarix, Huquq, Ona tili: 300 000 so'm/oy | Kimyo, Biologiya: 320 000 so'm/oy | Shaxmat: 250 000–300 000 so'm/oy."
+    },
+    {
+      "question": "Sertifikat beriladimi?",
+      "answer": "Ha, kursni tamomlagan o'quvchilarga sertifikat beriladi."
+    },
+    {
+      "question": "Onlayn darslar bormi?",
+      "answer": "Hozircha darslar oflayn (markazda) olib borilmoqda."
+    },
+    {
+      "question": "Dars qoldirsam nima bo'ladi?",
+      "answer": "Qoldirilgan darslar uchun qo'shimcha yo'naltirma darslar mavjud."
+    },
+    {
+      "question": "DTM uchun qaysi kurslar bor?",
+      "answer": "Matematika, Kimyo, Biologiya, Tarix, Huquq, Ona tili, Ingliz tili — barchasi DTM ga tayyorgarlik uchun."
+    },
+    {
+      "question": "O'quv materiallar beriladimi?",
+      "answer": "Ha, zamonaviy o'quv materiallari va darsliklar markaz tomonidan beriladi."
+    }
+  ],
+
+  "discounts_and_promotions": [
+    "Birinchi sinov darsi BEPUL — barcha yo'nalishlar bo'yicha",
+    "Ikkita kursga birdaniga yozilganda 10% chegirma",
+    "O'z do'stingizni olib kelsangiz 50 000 so'm keshbek",
+    "Bir oiladan ko'p farzand qatnashsa — yil oxirigacha 10% chegirma (barcha farzandlarga)",
+    "Guruh bilan (3+ kishi) yozilsangiz alohida imtiyozli narxlar",
+    "To'lovni bo'lib-bo'lib to'lash imkoniyati mavjud"
+  ],
+
+  "registration": "Ro'yxatdan o'tish uchun telefon raqamingizni yuboring yoki +998 97 925 20 03 ga qo'ng'iroq qiling. Telegram: https://t.me/serfayztv",
+
+  "social_media": {
+    "telegram": "https://t.me/serfayztv",
+    "telegram_username": "@serfayzuz",
+    "instagram": "https://www.instagram.com/serfayztv",
+    "instagram_username": "@serfayztv"
+  }
+}
