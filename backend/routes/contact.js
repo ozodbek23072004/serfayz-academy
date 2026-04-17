@@ -25,7 +25,7 @@ function saveContacts(contacts) {
 
 function checkAdmin(req, res) {
   const token = req.headers['x-admin-token'];
-  const adminToken = process.env.ADMIN_TOKEN || 'serfayz-admin-2024';
+  const adminToken = process.env.ADMIN_TOKEN || 'serfayz-admin-2026';
   if (token !== adminToken) {
     res.status(403).json({ error: "Ruxsat yo'q. Admin token talab qilinadi." });
     return false;
@@ -33,8 +33,39 @@ function checkAdmin(req, res) {
   return true;
 }
 
+// ── Simple in-memory rate limiter for SMS/Spam protection ──
+const contactRateLimitMap = new Map();
+function checkContactRateLimit(ip) {
+  const now = Date.now();
+  const lastTime = contactRateLimitMap.get(ip);
+  if (lastTime && (now - lastTime < 60_000)) {
+    return false; // 1 minut ichida faqat 1 ta ariza
+  }
+  contactRateLimitMap.set(ip, now);
+  return true;
+}
+
+// XSS (Cross-Site Scripting) himoyasi uchun
+function escapeHTML(str) {
+  return str.replace(/[&<>'"]/g, 
+    tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag] || tag)
+  );
+}
+
 // ── POST /api/contact — Yangi ariza qabul qilish ──
 router.post('/', (req, res) => {
+  // DDoS va Spam himoyasi
+  const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.ip || 'unknown';
+  if (!checkContactRateLimit(ip)) {
+     return res.status(429).json({ success: false, message: "Kiberxavfsizlik himoyasi: Iltimos keyingi arizani yozish uchun 1 daqiqa kuting." });
+  }
+
   try {
     const { phone, course, name, message } = req.body;
 
@@ -53,13 +84,13 @@ router.post('/', (req, res) => {
 
     const contacts = readContacts();
 
-    // Yangi ariza
+    // Yangi ariza (XSS sanitizatsiyasi bilan)
     const newContact = {
       id: Date.now().toString(),
-      name: (name || '').toString().trim().slice(0, 100),
-      phone: phoneClean,
-      course: (course || '').toString().trim().slice(0, 100),
-      message: (message || '').toString().trim().slice(0, 500),
+      name: escapeHTML((name || '').toString().trim().slice(0, 100)),
+      phone: escapeHTML(phoneClean),
+      course: escapeHTML((course || '').toString().trim().slice(0, 100)),
+      message: escapeHTML((message || '').toString().trim().slice(0, 500)),
       status: 'new',   // new | contacted | enrolled
       createdAt: new Date().toISOString()
     };
@@ -78,10 +109,10 @@ router.post('/', (req, res) => {
         console.warn("⚠️ Telegram CHAT_ID kiritilmagan (.env). Xabar yuborilmaydi. Iltimos Chat ID ni toping va qo'shing.");
       } else {
         const text = `📩 <b>Yangi ariza keldi!</b>\n\n👤 Ism: ${newContact.name || 'Nomsiz'}\n📞 Telefon: ${newContact.phone}\n🎓 Kurs: ${newContact.course || '-'}\n💬 Xabar: ${newContact.message || '-'}`;
-        
+
         // Chat ID larni vergul orqali ajratib, har biriga alohida yuborish
         const chatIds = telegramChatId.split(',').map(id => id.trim()).filter(id => id);
-        
+
         chatIds.forEach(chatId => {
           fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
             method: 'POST',

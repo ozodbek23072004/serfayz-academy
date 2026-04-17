@@ -56,10 +56,9 @@ app.use(
       if (!origin || origin === 'null' || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
-        // Development uchun barcha originlarga ruxsat beramiz
-        // Production da bu qatorni o'chirib qo'ying:
-        callback(null, true);
-        // callback(new Error(`CORS: ${origin} ga ruxsat yo'q`));
+        // XAVFSIZLIK (CORS): Faqat ruxsat berilgan domenlar ishlaydi. 
+        // Boshqa notanish domenlar to'xtatiladi.
+        callback(new Error(`CORS xavfsizlik: ${origin} ga ruxsat yo'q!`));
       }
     },
     methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],

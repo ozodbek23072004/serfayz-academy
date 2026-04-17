@@ -16,7 +16,26 @@
   </script>
 
   <meta name="description"
-    content="Serfayz Academy — professional ta'lim markazi. IELTS, dasturlash, dizayn va boshqa yo'nalishlarda intensiv kurslar. Birinchi dars bepul!" />
+    content="Serfayz Academy — professional ta'lim markazi. IELTS, ingliz tili, matematika va boshqa yo'nalishlarda intensiv kurslar. Birinchi dars bepul!" />
+  <meta name="keywords"
+    content="Serfayz Academy, o'quv markaz, IELTS kurslari, ingliz tili, matematika, Serfayz, Samarqand, Bulungur, Bulung'ur, Erganakli, serfayztv, serfayzuz, Sertifikat, SERFAYZ o'quv markazi, serfayz bulungur, serfayz bulungur ielts, serfayz bulungur ingliz tili, serfayz bulungur matematika, serfayz bulungur dasturlash, serfayz bulungur ingliz tili, serfayz bulungur matematika" />
+  <link rel="canonical" href="https://serfayz.uz/" />
+
+  <!-- Open Graph / Web & Telegram & Facebook da link tashlanganda ko'rinishi -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://serfayz.uz/" />
+  <meta property="og:title" content="Serfayz Academy | Kelajak Bugundan Boshlanadi" />
+  <meta property="og:description"
+    content="Kafolatlangan bilim va zamonaviy o'quv muhiti. Birinchi darsga bepul yoziling!" />
+  <meta property="og:image" content="https://serfayz.uz/assets/images/logo.png" />
+
+  <!-- Twitter Meta Teglari -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Serfayz Academy | Kelajak Bugundan Boshlanadi" />
+  <meta name="twitter:description"
+    content="Serfayz O'quv Markazi — zamonaviy metodika, milliy sertifikatlar va 24/7 AI yordamchisi bilan sizning muvaffaqiyatingiz yo'lini ochadi." />
+  <meta name="twitter:image" content="https://serfayz.uz/assets/images/logo.png" />
+
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Manrope:wght@400;500;600;700;800&family=Space+Mono&display=swap"
@@ -390,7 +409,7 @@
 
     /* Remove hardcoded tel input backgrounds to allow wrappers to style properly */
     input:-webkit-autofill,
-    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     select:-webkit-autofill,
     select:-webkit-autofill:hover,
@@ -517,12 +536,32 @@
         <button
           class="hidden md:block text-gray-900 dark:text-gray-600 dark:text-white/60 hover:text-gray-900 dark:text-white text-sm font-semibold transition-colors">Kirish</button>
         <button onclick="document.getElementById('free-lesson').scrollIntoView({behavior:'smooth'})"
-          class="bg-[#b0ff96] text-[#0e0e0e] px-6 py-2.5 rounded-lg font-headline font-black text-sm uppercase tracking-wider hover:scale-105 hover:glow-lime transition-all active:scale-95">
+          class="hidden md:block bg-[#b0ff96] text-[#0e0e0e] px-6 py-2.5 rounded-lg font-headline font-black text-sm uppercase tracking-wider hover:scale-105 hover:glow-lime transition-all active:scale-95">
           Ariza Topshirish
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-900 dark:text-white p-2 -mr-2">
+          <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-[#f8f5ff] dark:bg-[#0e0e0e] z-[60] flex flex-col pt-24 px-8 pb-8 transform translate-x-full transition-transform duration-300">
+    <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-900 dark:text-white p-2">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <nav class="flex flex-col gap-8 text-center mt-8">
+      <a href="#courses" class="mobile-link text-2xl font-black text-gray-900 dark:text-white font-headline uppercase">Kurslar</a>
+      <a href="#features" class="mobile-link text-2xl font-black text-gray-900 dark:text-white font-headline uppercase">Afzalliklar</a>
+      <a href="#stats" class="mobile-link text-2xl font-black text-gray-900 dark:text-white font-headline uppercase">Natijalar</a>
+      <a href="#contact" class="mobile-link text-2xl font-black text-gray-900 dark:text-white font-headline uppercase">Aloqa</a>
+    </nav>
+    <div class="mt-auto flex flex-col gap-4">
+      <button onclick="document.getElementById('free-lesson').scrollIntoView({behavior:'smooth'}); document.getElementById('close-mobile-menu').click();" class="bg-[#b0ff96] text-[#0e0e0e] py-4 rounded-xl font-headline font-black uppercase text-lg tracking-wider">Ariza Topshirish</button>
+      <button class="text-gray-900 dark:text-white font-bold py-4">Kirish</button>
+    </div>
+  </div>
 
   <!-- ═══════════════════════════════════════════════════════
      HERO — Dramatic dark + gradient text + orbs (v07 hero
@@ -549,56 +588,55 @@
           </div>
 
           <!-- H1 -->
-          <h1 class="text-6xl md:text-[88px] font-black leading-[0.92] tracking-tighter mb-8 glow-lime-text">
-            KELAJAK <br class="hidden md:block" />
-            <span class="gradient-text">BUGUNDAN</span><br class="hidden md:block" />
+          <h1 class="text-5xl sm:text-6xl md:text-[88px] font-black leading-[0.92] tracking-tighter mb-6 md:mb-8 glow-lime-text">
+            KELAJAK <br class="hidden sm:block" />
+            <span class="gradient-text">BUGUNDAN</span><br class="hidden sm:block" />
             BOSHLANADI.
           </h1>
 
           <p
-            class="text-gray-900 dark:text-gray-600 dark:text-white/60 text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-body">
+            class="text-gray-900 dark:text-gray-600 dark:text-white/60 text-base md:text-xl max-w-xl mb-8 md:mb-10 leading-relaxed font-body">
             Serfayz O'quv Markazi — zamonaviy metodika, milliy sertifikatlar va 24/7 AI yordamchisi bilan sizning
             muvaffaqiyatingiz yo'lini ochadi.
           </p>
 
           <!-- CTA buttons -->
-          <div class="flex flex-wrap gap-4 mb-12">
-            <button id="enroll-btn"
-              onclick="document.getElementById('free-lesson').scrollIntoView({behavior:'smooth'})"
-              class="bg-[#b0ff96] text-[#0e0e0e] px-10 py-5 rounded-xl font-headline font-black text-lg uppercase tracking-wider hover:scale-105 glow-lime transition-all flex items-center gap-3 active:scale-95">
+          <div class="flex flex-col sm:flex-row flex-wrap gap-4 mb-12">
+            <button id="enroll-btn" onclick="document.getElementById('free-lesson').scrollIntoView({behavior:'smooth'})"
+              class="bg-[#b0ff96] text-[#0e0e0e] px-8 md:px-10 py-4 md:py-5 rounded-xl font-headline font-black text-base md:text-lg uppercase tracking-wider hover:scale-105 glow-lime transition-all flex items-center justify-center gap-3 active:scale-95 w-full sm:w-auto">
               Kursga Yozilish
               <span class="material-symbols-outlined text-[#0e0e0e]">arrow_forward</span>
             </button>
             <button
-              class="glass-panel px-10 py-5 rounded-xl font-headline font-bold text-lg flex items-center gap-3 hover:bg-black/5 dark:bg-white/10 transition-all">
+              class="glass-panel px-8 md:px-10 py-4 md:py-5 rounded-xl font-headline font-bold text-base md:text-lg flex items-center justify-center gap-3 hover:bg-black/5 dark:bg-white/10 transition-all w-full sm:w-auto">
               <span class="material-symbols-outlined text-[#b0ff96]">play_circle</span>
               Video tanishuv
             </button>
           </div>
 
           <!-- Mini stats inline (v03 adapted) -->
-          <div class="flex flex-wrap gap-8">
+          <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-y-6 gap-x-4 sm:gap-8">
             <div>
               <div class="text-3xl font-black text-[#b0ff96] font-headline">500+</div>
-              <div class="mono text-xs text-gray-900 dark:text-gray-500 dark:text-white/50 tracking-widest uppercase">
+              <div class="mono text-xs text-gray-900 dark:text-gray-500 dark:text-white/50 tracking-widest uppercase mt-1">
                 O'quvchilar</div>
             </div>
-            <div class="w-px bg-black/5 dark:bg-white/10"></div>
+            <div class="hidden sm:block w-px bg-black/5 dark:bg-white/10"></div>
             <div>
               <div class="text-3xl font-black text-[#00e0ff] font-headline">95%</div>
-              <div class="mono text-xs text-gray-900 dark:text-gray-500 dark:text-white/50 tracking-widest uppercase">
+              <div class="mono text-xs text-gray-900 dark:text-gray-500 dark:text-white/50 tracking-widest uppercase mt-1">
                 O'qishga kirish</div>
             </div>
-            <div class="w-px bg-black/5 dark:bg-white/10"></div>
+            <div class="hidden sm:block w-px bg-black/5 dark:bg-white/10"></div>
             <div>
               <div class="text-3xl font-black text-[#fe6b00] font-headline">10+</div>
-              <div class="mono text-xs text-gray-900 dark:text-gray-500 dark:text-white/50 tracking-widest uppercase">
+              <div class="mono text-xs text-gray-900 dark:text-gray-500 dark:text-white/50 tracking-widest uppercase mt-1">
                 O'qituvchilar</div>
             </div>
-            <div class="w-px bg-black/5 dark:bg-white/10"></div>
+            <div class="hidden sm:block w-px bg-black/5 dark:bg-white/10"></div>
             <div>
               <div class="text-3xl font-black text-gray-900 dark:text-white font-headline">24/7</div>
-              <div class="mono text-xs text-gray-900 dark:text-gray-500 dark:text-white/50 tracking-widest uppercase">AI
+              <div class="mono text-xs text-gray-900 dark:text-gray-500 dark:text-white/50 tracking-widest uppercase mt-1">AI
                 Yordami</div>
             </div>
           </div>
@@ -649,28 +687,28 @@
      STATS BAR — Bold figures (v06 borderline style + v07 dark)
 ════════════════════════════════════════════════════════ -->
     <section id="stats"
-      class="bg-white shadow-xl dark:shadow-none dark:bg-[#1a1a1a] border-y border-black/5 dark:border-white/5 py-16">
-      <div class="max-w-[1440px] mx-auto px-8">
+      class="bg-white shadow-xl dark:shadow-none dark:bg-[#1a1a1a] border-y border-black/5 dark:border-white/5 py-10 md:py-16">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-0">
-          <div class="p-10 accent-line-lime border-r border-black/5 dark:border-white/5">
-            <div class="text-5xl font-black text-[#b0ff96] font-headline mb-2">500+</div>
-            <div class="mono text-xs uppercase tracking-widest text-gray-900 dark:text-gray-500 dark:text-white/50">
+          <div class="p-6 md:p-10 accent-line-lime border-r border-b md:border-b-0 border-black/5 dark:border-white/5">
+            <div class="text-3xl md:text-5xl font-black text-[#b0ff96] font-headline mb-2">500+</div>
+            <div class="mono text-[10px] md:text-xs uppercase tracking-widest text-gray-900 dark:text-gray-500 dark:text-white/50">
               O'quvchilar</div>
           </div>
-          <div class="p-10 accent-line-orange border-r border-black/5 dark:border-white/5">
-            <div class="text-5xl font-black text-[#fe6b00] font-headline mb-2">95%</div>
-            <div class="mono text-xs uppercase tracking-widest text-gray-900 dark:text-gray-500 dark:text-white/50">
+          <div class="p-6 md:p-10 accent-line-orange md:border-r border-b md:border-b-0 border-black/5 dark:border-white/5">
+            <div class="text-3xl md:text-5xl font-black text-[#fe6b00] font-headline mb-2">95%</div>
+            <div class="mono text-[10px] md:text-xs uppercase tracking-widest text-gray-900 dark:text-gray-500 dark:text-white/50">
               O'qishga kirish</div>
           </div>
-          <div class="p-10 accent-line-lime border-r border-black/5 dark:border-white/5">
-            <div class="text-5xl font-black text-[#00e0ff] font-headline mb-2">10+</div>
-            <div class="mono text-xs uppercase tracking-widest text-gray-900 dark:text-gray-500 dark:text-white/50">
+          <div class="p-6 md:p-10 accent-line-lime border-r border-black/5 dark:border-white/5">
+            <div class="text-3xl md:text-5xl font-black text-[#00e0ff] font-headline mb-2">10+</div>
+            <div class="mono text-[10px] md:text-xs uppercase tracking-widest text-gray-900 dark:text-gray-500 dark:text-white/50">
               O'qituvchilar</div>
           </div>
-          <div class="p-10 accent-line-orange">
-            <div class="text-5xl font-black text-gray-900 dark:text-white font-headline mb-2">24/7</div>
-            <div class="mono text-xs uppercase tracking-widest text-gray-900 dark:text-gray-500 dark:text-white/50">AI
-              Bot Xizmati</div>
+          <div class="p-6 md:p-10 accent-line-orange">
+            <div class="text-3xl md:text-5xl font-black text-gray-900 dark:text-white font-headline mb-2">24/7</div>
+            <div class="mono text-[10px] md:text-xs uppercase tracking-widest text-gray-900 dark:text-gray-500 dark:text-white/50">AI
+              Xizmati</div>
           </div>
         </div>
       </div>
@@ -679,17 +717,17 @@
     <!-- ═══════════════════════════════════════════════════════
      COURSES — Bento grid (v06 fullscreen cards + v07 small cards)
 ════════════════════════════════════════════════════════ -->
-    <section id="courses" class="py-32 px-8 max-w-[1440px] mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+    <section id="courses" class="py-20 md:py-32 px-6 md:px-8 max-w-[1440px] mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-6 md:gap-8">
         <div>
           <div class="mono text-[#b0ff96] text-xs tracking-[0.3em] uppercase mb-4 flex items-center gap-3">
             <span class="w-8 h-px bg-[#b0ff96]"></span> Yo'nalishlar
           </div>
-          <h2 class="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase">
-            O'QUV <span class="gradient-text">YO'NALISHLARI</span>
+          <h2 class="text-4xl md:text-7xl font-black tracking-tighter leading-none uppercase">
+            O'QUV <br class="md:hidden" /><span class="gradient-text">YO'NALISHLARI</span>
           </h2>
         </div>
-        <div class="text-gray-900 dark:text-gray-500 dark:text-white/50 max-w-sm text-right leading-relaxed font-body">
+        <div class="text-gray-900 dark:text-gray-500 dark:text-white/50 max-w-sm text-left md:text-right leading-relaxed font-body text-sm md:text-base">
           Sanoat standartlariga asoslangan intensiv dasturlar va real loyihalar ustida ishlash imkoniyati.
         </div>
       </div>
@@ -906,15 +944,15 @@
     <!-- ═══════════════════════════════════════════════════════
      WHY US — Asymmetric bento (v06 bold style + v03 icons)
 ════════════════════════════════════════════════════════ -->
-    <section id="features" class="py-32 bg-[#fafafa] dark:bg-[#111] px-8">
+    <section id="features" class="py-20 md:py-32 bg-[#fafafa] dark:bg-[#111] px-6 md:px-8">
       <div class="max-w-[1440px] mx-auto">
 
-        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <h2 class="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-6 md:gap-8">
+          <h2 class="text-4xl md:text-7xl font-black tracking-tighter leading-none uppercase">
             NIMA UCHUN <br /><span class="text-[#fe6b00]">BIZNI TANLASHADI?</span>
           </h2>
           <p
-            class="text-gray-900 dark:text-gray-500 dark:text-white/50 font-bold uppercase tracking-widest text-sm max-w-xs text-right font-body">
+            class="text-gray-900 dark:text-gray-500 dark:text-white/50 font-bold uppercase tracking-widest text-xs md:text-sm max-w-xs text-left md:text-right font-body">
             Professional Standartlar</p>
         </div>
 
@@ -1013,31 +1051,40 @@
     <!-- ═══════════════════════════════════════════════════════
      TESTIMONIAL quote (v06 institutional quote section)
 ════════════════════════════════════════════════════════ -->
-    <section class="py-32 bg-[#f8f5ff] dark:bg-[#0e0e0e] px-8">
+    <section class="py-20 md:py-32 bg-[#f8f5ff] dark:bg-[#0e0e0e] px-6 md:px-8">
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          
+
           <!-- Photo Column -->
           <div class="lg:col-span-5 relative order-2 lg:order-1">
-            <div class="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-black/5 dark:border-white/10 shadow-2xl group">
+            <div
+              class="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-black/5 dark:border-white/10 shadow-2xl group">
               <!-- Behind glow -->
-              <div class="absolute inset-0 orb-orange blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none"></div>
-              
-              <img
-                src="./assets/images/director.png"
-                alt="Academy Director" class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-105" />
-            </div>
-            
-            <!-- Floating accent badge -->
-            <div class="absolute -bottom-6 -right-6 glass-panel rounded-2xl p-5 shadow-2xl border border-[#b0ff96]/20 z-20 hidden md:block">
-              <div class="flex gap-1 mb-2">
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+              <div
+                class="absolute inset-0 orb-orange blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700 pointer-events-none">
               </div>
-              <div class="mono text-xs text-gray-900 dark:text-white uppercase tracking-widest font-black">Serfayz Academy</div>
+
+              <img src="./assets/images/director.png" alt="Academy Director"
+                class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-105" />
+            </div>
+
+            <!-- Floating accent badge -->
+            <div
+              class="absolute -bottom-6 -right-6 glass-panel rounded-2xl p-5 shadow-2xl border border-[#b0ff96]/20 z-20 hidden md:block">
+              <div class="flex gap-1 mb-2">
+                <span class="material-symbols-outlined text-[#fe6b00]"
+                  style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+                <span class="material-symbols-outlined text-[#fe6b00]"
+                  style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+                <span class="material-symbols-outlined text-[#fe6b00]"
+                  style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+                <span class="material-symbols-outlined text-[#fe6b00]"
+                  style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+                <span class="material-symbols-outlined text-[#fe6b00]"
+                  style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+              </div>
+              <div class="mono text-xs text-gray-900 dark:text-white uppercase tracking-widest font-black">Serfayz
+                Academy</div>
             </div>
           </div>
 
@@ -1047,29 +1094,36 @@
               style="font-variation-settings:'FILL' 1,'wght' 700">format_quote</span>
             <blockquote
               class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white italic leading-tight mb-12 font-headline">
-              "Oliy ta’limga tayyorgarlik — bu faqat kitob o‘qish emas, bu o‘z ustida ishlash va g‘oliblik falsafasini o‘rganishdir."
+              "Oliy ta’limga tayyorgarlik — bu faqat kitob o‘qish emas, bu o‘z ustida ishlash va g‘oliblik falsafasini
+              o‘rganishdir."
             </blockquote>
-            
+
             <cite class="not-italic flex items-center gap-6">
               <div class="w-1.5 h-14 bg-gradient-to-b from-[#b0ff96] to-[#00e0ff] rounded-full hidden sm:block"></div>
               <div>
                 <span
-                  class="block text-2xl font-black text-gray-900 dark:text-white uppercase tracking-tight font-headline">Navruz Sariboyev</span>
+                  class="block text-2xl font-black text-gray-900 dark:text-white uppercase tracking-tight font-headline">Navruz
+                  Sariboyev</span>
                 <span
                   class="block text-sm text-gray-900 dark:text-gray-500 dark:text-white/50 font-bold uppercase tracking-widest mono mt-1">Serfayz
                   O'quv Markazi Direktori</span>
               </div>
             </cite>
-            
+
             <div class="flex gap-1 mt-8 md:hidden">
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
-                <span class="material-symbols-outlined text-[#fe6b00]" style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+              <span class="material-symbols-outlined text-[#fe6b00]"
+                style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+              <span class="material-symbols-outlined text-[#fe6b00]"
+                style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+              <span class="material-symbols-outlined text-[#fe6b00]"
+                style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+              <span class="material-symbols-outlined text-[#fe6b00]"
+                style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
+              <span class="material-symbols-outlined text-[#fe6b00]"
+                style="font-variation-settings:'FILL' 1,'wght' 700">star</span>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>
@@ -1077,8 +1131,8 @@
     <!-- ═══════════════════════════════════════════════════════
      CTA — Free first lesson (v03 CTA + v07/v06 dark styling)
 ════════════════════════════════════════════════════════ -->
-    <section id="free-lesson" class="px-8 pb-20 max-w-[1440px] mx-auto">
-      <div class="relative bg-blue-50 dark:bg-[#001736] rounded-[2rem] overflow-hidden p-12 md:p-20">
+    <section id="free-lesson" class="px-4 sm:px-8 pb-16 md:pb-20 max-w-[1440px] mx-auto">
+      <div class="relative bg-blue-50 dark:bg-[#001736] rounded-[2rem] overflow-hidden p-8 sm:p-12 md:p-20">
         <!-- Background pattern orb -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] orb-lime blur-[120px] opacity-20 pointer-events-none">
         </div>
@@ -1086,42 +1140,51 @@
           class="absolute bottom-0 left-1/4 w-[400px] h-[400px] orb-orange blur-[80px] opacity-30 pointer-events-none">
         </div>
         <!-- Architectural accent (v06) -->
-        <div class="absolute bottom-0 right-0 w-1/4 h-2 bg-[#b0ff96]"></div>
-        <div class="absolute top-0 left-0 w-1/4 h-2 bg-[#fe6b00]"></div>
+        <div class="absolute bottom-0 right-0 w-1/3 md:w-1/4 h-2 bg-[#b0ff96]"></div>
+        <div class="absolute top-0 left-0 w-1/3 md:w-1/4 h-2 bg-[#fe6b00]"></div>
 
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center">
           <div>
-            <div class="mono text-[#b0ff96] text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-3">
-              <span class="w-8 h-px bg-[#b0ff96]"></span> Maxsus Taklif
+            <div class="mono text-[#b0ff96] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-4 md:mb-6 flex items-center gap-3">
+              <span class="w-6 md:w-8 h-px bg-[#b0ff96]"></span> Maxsus Taklif
             </div>
             <h2
-              class="text-5xl md:text-7xl font-black text-gray-900 dark:text-white uppercase tracking-tighter leading-none mb-6 font-headline">
+              class="text-4xl md:text-7xl font-black text-gray-900 dark:text-white uppercase tracking-tighter leading-none mb-4 md:mb-6 font-headline">
               BIRINCHI DARS <br /><span class="text-[#b0ff96]">BEPUL</span>
             </h2>
-            <p class="text-gray-900 dark:text-gray-600 dark:text-white/60 text-lg mb-10 font-body leading-relaxed">
+            <p class="text-gray-900 dark:text-gray-600 dark:text-white/60 text-base md:text-lg mb-8 md:mb-10 font-body leading-relaxed">
               O'zingiz qiziqqan fanni tanlang va bizning metodikamiz bilan bepul tanishib chiqing. Hech qanday
               majburiyatsiz!
             </p>
             <div class="flex flex-col gap-4">
               <!-- Name input -->
-              <div class="relative flex items-center bg-black/5 dark:bg-white/10 rounded-xl border border-black/10 dark:border-white/20 focus-within:ring-2 focus-within:ring-[#b0ff96] focus-within:border-transparent overflow-hidden">
+              <div
+                class="relative flex items-center bg-black/5 dark:bg-white/10 rounded-xl border border-black/10 dark:border-white/20 focus-within:ring-2 focus-within:ring-[#b0ff96] focus-within:border-transparent overflow-hidden">
                 <span class="material-symbols-outlined text-gray-400 dark:text-white/40 ml-4 shrink-0">person</span>
-                <input type="text" id="hero-name-input" placeholder="Ism va Familiya" 
+                <input type="text" id="hero-name-input" placeholder="Ism va Familiya"
                   class="flex-1 px-4 py-4 bg-transparent !bg-transparent border-0 outline-none focus:ring-0 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-white/30 font-body w-full" />
               </div>
-              
+
               <!-- Course select -->
-              <div class="relative flex items-center bg-black/5 dark:bg-white/10 rounded-xl border border-black/10 dark:border-white/20 focus-within:ring-2 focus-within:ring-[#b0ff96] focus-within:border-transparent overflow-hidden">
+              <div
+                class="relative flex items-center bg-black/5 dark:bg-white/10 rounded-xl border border-black/10 dark:border-white/20 focus-within:ring-2 focus-within:ring-[#b0ff96] focus-within:border-transparent overflow-hidden">
                 <span class="material-symbols-outlined text-gray-400 dark:text-white/40 ml-4 shrink-0">book</span>
-                <select id="hero-course-input" class="flex-1 px-4 py-4 bg-transparent !bg-transparent border-0 outline-none focus:ring-0 text-gray-900 dark:text-white font-body appearance-none cursor-pointer w-full">
-                  <option value="" disabled selected class="text-gray-900 bg-white dark:bg-gray-800 dark:text-white">Qaysi kursni tanlaysiz?</option>
-                  <option value="Ingliz tili" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Ingliz tili (IELTS)</option>
-                  <option value="Matematika" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Matematika</option>
-                  <option value="Rus tili" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Rus tili</option>
+                <select id="hero-course-input"
+                  class="flex-1 px-4 py-4 bg-transparent !bg-transparent border-0 outline-none focus:ring-0 text-gray-900 dark:text-white font-body appearance-none cursor-pointer w-full">
+                  <option value="" disabled selected class="text-gray-900 bg-white dark:bg-gray-800 dark:text-white">
+                    Qaysi kursni tanlaysiz?</option>
+                  <option value="Ingliz tili" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Ingliz
+                    tili (IELTS)</option>
+                  <option value="Matematika" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Matematika
+                  </option>
+                  <option value="Rus tili" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Rus tili
+                  </option>
                   <option value="Kimyo" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Kimyo</option>
-                  <option value="Biologiya" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Biologiya</option>
+                  <option value="Biologiya" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Biologiya
+                  </option>
                   <option value="Tarix" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Tarix</option>
-                  <option value="Ona tili" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Ona tili</option>
+                  <option value="Ona tili" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Ona tili
+                  </option>
                   <option value="Huquq" class="text-gray-900 bg-white dark:bg-[#1a1a1a] dark:text-white">Huquq</option>
                 </select>
                 <div class="absolute right-4 pointer-events-none flex items-center">
@@ -1130,13 +1193,15 @@
               </div>
 
               <!-- Phone input -->
-              <div class="relative flex items-center bg-black/5 dark:bg-white/10 rounded-xl border border-black/10 dark:border-white/20 focus-within:ring-2 focus-within:ring-[#b0ff96] focus-within:border-transparent overflow-hidden">
+              <div
+                class="relative flex items-center bg-black/5 dark:bg-white/10 rounded-xl border border-black/10 dark:border-white/20 focus-within:ring-2 focus-within:ring-[#b0ff96] focus-within:border-transparent overflow-hidden">
                 <span class="material-symbols-outlined text-gray-400 dark:text-white/40 ml-4 shrink-0">call</span>
-                <span class="pl-2 pr-1 text-gray-900 dark:text-white font-bold font-body select-none whitespace-nowrap cursor-default">+998</span>
+                <span
+                  class="pl-2 pr-1 text-gray-900 dark:text-white font-bold font-body select-none whitespace-nowrap cursor-default">+998</span>
                 <input type="tel" id="hero-phone-input" placeholder="99 123-45-67" maxlength="12"
                   class="flex-1 pl-1 pr-4 py-4 bg-transparent !bg-transparent border-0 outline-none focus:ring-0 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-white/30 font-body w-full" />
               </div>
-              
+
               <button id="hero-submit-btn"
                 class="w-full bg-[#b0ff96] text-[#0e0e0e] px-10 py-4 mt-2 rounded-xl font-headline font-black uppercase tracking-wider hover:scale-105 glow-lime transition-all active:scale-95 whitespace-nowrap">
                 Ariza Topshirish
@@ -1184,13 +1249,13 @@
     <!-- ═══════════════════════════════════════════════════════
      CONTACT (v03 structure + dark styling)
 ════════════════════════════════════════════════════════ -->
-    <section id="contact" class="max-w-[1440px] mx-auto px-8 py-24 border-t border-black/5 dark:border-white/5">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <section id="contact" class="max-w-[1440px] mx-auto px-6 md:px-8 py-16 md:py-24 border-t border-black/5 dark:border-white/5">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
         <div>
-          <div class="mono text-[#b0ff96] text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-3">
+          <div class="mono text-[#b0ff96] text-xs tracking-[0.3em] uppercase mb-4 md:mb-6 flex items-center gap-3">
             <span class="w-8 h-px bg-[#b0ff96]"></span> Aloqa
           </div>
-          <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-10 font-headline uppercase">Biz bilan
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-8 md:mb-10 font-headline uppercase">Biz bilan
             Bog'laning</h2>
           <div class="space-y-8">
             <div class="flex items-start gap-5">
@@ -1317,11 +1382,11 @@
      CHAT WIDGET (Glass panel + #b0ff96)
   ════════════════════════════════════════════════════════ -->
   <div id="ai-chat-widget"
-    class="fixed bottom-24 right-8 z-50 flex flex-col items-end transition-all duration-300 translate-y-4 opacity-0 pointer-events-none">
+    class="fixed bottom-24 right-4 sm:right-8 z-50 flex flex-col items-end transition-all duration-300 translate-y-4 opacity-0 pointer-events-none">
 
     <!-- Chat Window -->
     <div id="ai-chat-window"
-      class="glass-panel w-80 sm:w-96 rounded-2xl border border-[#b0ff96]/30 overflow-hidden mb-4 shadow-2xl flex flex-col h-[450px] scale-95 origin-bottom-right transition-transform duration-300">
+      class="glass-panel w-[calc(100vw-2rem)] sm:w-96 rounded-2xl border border-[#b0ff96]/30 overflow-hidden mb-4 shadow-2xl flex flex-col h-[60vh] max-h-[500px] min-h-[400px] scale-95 origin-bottom-right transition-transform duration-300">
 
       <!-- Header -->
       <div
@@ -1362,7 +1427,7 @@
 
   <!-- Chat Widget Toggle Button -->
   <button id="ai-chat-toggle"
-    class="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-[#b0ff96] flex items-center justify-center text-[#0e0e0e] shadow-lg shadow-[#b0ff96]/20 hover:scale-110 active:scale-95 transition-all glow-lime">
+    class="fixed bottom-6 sm:bottom-8 right-4 sm:right-8 z-50 w-14 h-14 rounded-full bg-[#b0ff96] flex items-center justify-center text-[#0e0e0e] shadow-lg shadow-[#b0ff96]/20 hover:scale-110 active:scale-95 transition-all glow-lime">
     <span class="material-symbols-outlined text-2xl transition-transform duration-300" id="ai-chat-icon">forum</span>
   </button>
 
@@ -1443,7 +1508,7 @@
         if (el) el.remove();
       };
 
-      const API_BASE = "http://localhost:3000";
+      const API_BASE = "";
 
       const sendMessage = async () => {
         const text = input.value.trim();
@@ -1491,7 +1556,7 @@
         } catch (err) {
           console.error("Chat xatosi:", err);
           removeTypingIndicator();
-          addMessage("🔌 Server bilan ulanishda xato yuz berdi. Iltimos:\n1. Backend server ishlayotganini tekshiring\n2. Yoki +998 97 925 20 03 ga qo'ng'iroq qiling.", "ai");
+          addMessage("Hozirda AI xizmatida kichik ulanish uzilishi bor 🤖.\nIltimos, darslar haqida batafsil ma'lumot olish bo'yicha to'g'ridan to'g'ri administratorlarimizga qo'ng'iroq qilaqoling: \n📞 +998 97 925 20 03", "ai");
         } finally {
           input.disabled = false;
           sendBtn.disabled = false;
@@ -1554,7 +1619,7 @@
   <!-- Contact Form API + Toast -->
   <script>
     (() => {
-      const API = "http://localhost:3000";
+      const API = "";
       function showToast(msg, type) {
         const old = document.getElementById("sa-toast");
         if (old) old.remove();
@@ -1598,11 +1663,11 @@
           const name = nameInp ? nameInp.value.trim() : "";
           const course = courseInp ? courseInp.value : "";
           const digits = phoneInp.value.trim();
-          
+
           if (!name) { showToast("Ismingizni kiriting!", "error"); nameInp.focus(); return; }
           if (!course) { showToast("Kursni tanlang!", "error"); courseInp.focus(); return; }
           if (!digits || digits.length < 12) { showToast("Telefon raqamni to'liq kiriting!", "error"); phoneInp.focus(); return; }
-          
+
           const phone = "+998 " + digits;
 
           const orig = btn.innerHTML;
@@ -1638,6 +1703,31 @@
         if (nameInp) nameInp.addEventListener("keypress", e => { if (e.key === "Enter") submitContact(); });
       });
     })();
+  </script>
+
+  <script>
+    // Mobile Menu Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const closeMobileMenuBtn = document.getElementById("close-mobile-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      const toggleMenu = () => {
+        if (mobileMenu) {
+          mobileMenu.classList.toggle("translate-x-full");
+        }
+      };
+
+      if (mobileMenuBtn && closeMobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", toggleMenu);
+        closeMobileMenuBtn.addEventListener("click", toggleMenu);
+        
+        mobileLinks.forEach(link => {
+          link.addEventListener("click", toggleMenu);
+        });
+      }
+    });
   </script>
 </body>
 
