@@ -98,18 +98,7 @@
       "duration": "6–9 oy",
       "price": "300 000 so'm",
       "description": "Huquqshunoslikka tayyorgarlik va asosiy huquqiy bilimlar"
-    },
-    {
-      "name": "Shaxmat",
-      "levels": [
-        "Boshlang'ich",
-        "O'rta",
-        "Professional"
-      ],
-      "duration": "3–12 oy",
-      "price": "250 000 – 300 000 so'm",
-      "description": "Shaxmat bo'yicha guruh va individual darslar. Yakshanba kunlari musobaqalar o'tkaziladi"
-    }
-  ],
+    },     ],
+  
   "registration": "Ro'yxatdan o'tish uchun telefon raqamingizni yuboring yoki +998 97 925 20 03 ga qo'ng'iroq qiling. Shuningdek, bepul sinov darsiga yozilishingiz mumkin!"
 }
