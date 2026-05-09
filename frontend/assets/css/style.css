@@ -401,3 +401,50 @@
       color: #1e1635 !important;
     }
   
+    /* ── Mobile Optimizations (v2.2) ────────────────────────── */
+    @media (max-width: 640px) {
+      /* Hero H1 font size for phones */
+      h1 {
+        font-size: 2.8rem !important;
+        line-height: 1 !important;
+      }
+
+      /* Sections padding */
+      section {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+      }
+
+      /* AI Chat Widget on Mobile */
+      #ai-chat-widget {
+        width: 100% !important;
+        height: 100% !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        border-radius: 0 !important;
+      }
+
+      #ai-chat-window {
+        height: 100% !important;
+        border-radius: 0 !important;
+        border: none !important;
+      }
+
+      /* Chat toggle button on mobile */
+      #ai-chat-toggle {
+        bottom: 1.5rem !important;
+        right: 1rem !important;
+      }
+      
+      /* Bento grid and other cards */
+      .card-lift {
+        padding: 1.5rem !important;
+      }
+    }
+
+    /* Support for Notch/Safe Areas */
+    @supports (padding: env(safe-area-inset-bottom)) {
+      #ai-chat-toggle {
+        bottom: calc(1.5rem + env(safe-area-inset-bottom)) !important;
+      }
+    }
