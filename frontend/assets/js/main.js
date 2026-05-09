@@ -213,10 +213,22 @@
         const btn = document.getElementById("hero-submit-btn");
         if (!phoneInp || !btn) return;
 
-        // Phone mask: XX XXX-XX-XX
+        // Phone input control: faqat raqamlarga ruxsat beramiz
+        phoneInp.addEventListener("keydown", (e) => {
+          // Ruxsat berilgan tugmalar: backspace, delete, tab, escape, enter, numbers
+          if ([46, 8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
+              (e.keyCode >= 48 && e.keyCode <= 57) || 
+              (e.keyCode >= 96 && e.keyCode <= 105)) {
+              return;
+          }
+          // Qolgan hamma narsani to'xtatamiz (harflar, belgilar)
+          e.preventDefault();
+        });
+
         phoneInp.addEventListener("input", (e) => {
-          let x = e.target.value.replace(/\D/g, '');
+          let x = e.target.value.replace(/\D/g, ''); // Raqam bo'lmagan hamma narsani o'chirish
           if (x.length > 9) x = x.substring(0, 9);
+          
           let formatted = "";
           if (x.length > 0) formatted += x.substring(0, 2);
           if (x.length > 2) formatted += " " + x.substring(2, 5);

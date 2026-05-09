@@ -69,29 +69,29 @@ router.post('/', (req, res) => {
   try {
     const { phone, course, name, message } = req.body;
 
-    // Validatsiya: telefon bo'sh bo'lmasin
-    if (!phone || typeof phone !== 'string') {
-      return res.status(400).json({ success: false, message: "Telefon raqam bo'sh bo'lishi mumkin emas." });
+    // 1. Telefon validatsiyasi (Faqat raqamlar, +, -, space va qavslar, 9-15 ta belgi)
+    const phoneClean = phone.toString().trim();
+    const phoneRegex = /^\+?[0-9\s\-()]{9,15}$/;
+    if (!phoneRegex.test(phoneClean)) {
+      return res.status(400).json({ success: false, message: "Iltimos, haqiqiy telefon raqamini kiriting." });
     }
 
-    const phoneClean = phone.trim();
-
-    // Format tekshiruvi
-    const phoneRegex = /^\+?[0-9\s\-()]{9,20}$/;
-    if (!phoneRegex.test(phoneClean)) {
-      return res.status(400).json({ success: false, message: "Noto'g'ri telefon raqam formati." });
+    // 2. Ism validatsiyasi (Juda uzun ismlarga yo'l qo'ymaymiz)
+    const safeName = escapeHTML((name || 'Nomsiz').toString().trim().slice(0, 50));
+    if (safeName.length < 2) {
+       return res.status(400).json({ success: false, message: "Ism juda qisqa." });
     }
 
     const contacts = readContacts();
 
-    // Yangi ariza (XSS sanitizatsiyasi bilan)
+    // Yangi ariza
     const newContact = {
       id: Date.now().toString(),
-      name: escapeHTML((name || '').toString().trim().slice(0, 100)),
+      name: safeName,
       phone: escapeHTML(phoneClean),
-      course: escapeHTML((course || '').toString().trim().slice(0, 100)),
-      message: escapeHTML((message || '').toString().trim().slice(0, 500)),
-      status: 'new',   // new | contacted | enrolled
+      course: escapeHTML((course || 'Noma’lum').toString().trim().slice(0, 50)),
+      message: escapeHTML((message || '').toString().trim().slice(0, 300)),
+      status: 'new',
       createdAt: new Date().toISOString()
     };
 
