@@ -1,0 +1,403 @@
+  
+    /* ── Base ─────────────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      transition: background 0.45s ease, color 0.3s ease;
+    }
+
+    /* Smooth theme transitions on all elements */
+    *,
+    *::before,
+    *::after {
+      transition-property: background-color, border-color, box-shadow, color;
+      transition-duration: 0.35s;
+      transition-timing-function: ease;
+    }
+
+    /* But keep transform/opacity transitions at their own speed (don't override) */
+    .card-lift,
+    .float-anim,
+    .slide-up,
+    .pulse-dot,
+    [class*="hover:scale"] {
+      transition: transform 0.28s ease, box-shadow 0.28s ease,
+        border-color 0.28s ease, background-color 0.35s ease,
+        color 0.35s ease, opacity 0.3s ease;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .mono {
+      font-family: 'Space Mono', monospace;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    /* ── Glassmorphism nav (v03 + v07) ───────────────────── */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .dark .glass-nav {
+      background: rgba(0, 23, 54, 0.72);
+      border-bottom: 1px solid rgba(176, 255, 150, 0.06);
+    }
+
+    /* ── Neon glow utilities (v07) ───────────────────────── */
+    .glow-lime {
+      box-shadow: 0 0 32px rgba(176, 255, 150, 0.35);
+    }
+
+    .glow-lime-text {
+      text-shadow: 0 0 18px rgba(176, 255, 150, 0.45);
+    }
+
+    .glow-orange {
+      box-shadow: 0 0 32px rgba(254, 107, 0, 0.40);
+    }
+
+    /* ── Gradient text ───────────────────────────────────── */
+    .gradient-text {
+      background: linear-gradient(135deg, #b0ff96 0%, #00e0ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Glassmorphism panel (v07) ───────────────────────── */
+    .glass-panel {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    /* ── Orange accent line (v06) ────────────────────────── */
+    .accent-line-orange {
+      border-left: 4px solid #fe6b00;
+    }
+
+    .accent-line-lime {
+      border-left: 4px solid #b0ff96;
+    }
+
+    .accent-top-orange {
+      border-top: 6px solid #fe6b00;
+    }
+
+    /* ── Hover card lift ─────────────────────────────────── */
+    .card-lift {
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .card-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+      border-color: rgba(176, 255, 150, 0.28);
+    }
+
+    /* ── Slide-up on hover text (v06 course cards) ───────── */
+    .slide-up {
+      transform: translateY(12px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .group:hover .slide-up {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ── Scrollbar ──────────────────────────────────────── */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0e0e0e;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #b0ff96;
+      border-radius: 4px;
+    }
+
+    html:not(.dark) ::-webkit-scrollbar-track {
+      background: #ede9f8;
+    }
+
+    html:not(.dark) ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #b0ff96, #00e0ff);
+      border-radius: 4px;
+    }
+
+    /* ── Animated underline for nav links ─────────────────── */
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #b0ff96;
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* ── Pulsing dot ──────────────────────────────────────── */
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(1.6);
+      }
+    }
+
+    .pulse-dot {
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    /* ── Float animation (hero badge) ────────────────────── */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .float-anim {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* ── Gradient BG orbs ───────────────────────────────── */
+    .orb-lime {
+      background: radial-gradient(circle, rgba(176, 255, 150, 0.18) 0%, transparent 70%);
+    }
+
+    .orb-cyan {
+      background: radial-gradient(circle, rgba(0, 224, 255, 0.12) 0%, transparent 70%);
+    }
+
+    .orb-orange {
+      background: radial-gradient(circle, rgba(254, 107, 0, 0.12) 0%, transparent 70%);
+    }
+
+    /* ══════════════════════════════════════════════════════
+       PREMIUM DAY MODE — rich light theme overrides
+    ══════════════════════════════════════════════════════ */
+
+    /* Mesh-gradient body — not plain white */
+    html:not(.dark) body {
+      background:
+        radial-gradient(ellipse 80% 60% at 5% 5%, rgba(176, 255, 150, .13) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 95% 5%, rgba(0, 224, 255, .10) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 95% 95%, rgba(254, 107, 0, .07) 0%, transparent 55%),
+        radial-gradient(ellipse 70% 60% at 5% 95%, rgba(176, 150, 255, .10) 0%, transparent 55%),
+        linear-gradient(160deg, #f8f5ff 0%, #f5f0ff 40%, #fff6f0 70%, #f0f9ff 100%);
+      background-attachment: fixed;
+    }
+
+    /* Glass panel — pearlescent white in day mode */
+    html:not(.dark) .glass-panel {
+      background: rgba(255, 255, 255, .82);
+      border: 1px solid rgba(0, 0, 0, .07);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .08),
+        inset 0 1px 0 rgba(255, 255, 255, .95);
+    }
+
+    /* Card lift — softer shadow in day mode */
+    html:not(.dark) .card-lift:hover {
+      box-shadow: 0 24px 56px rgba(109, 40, 217, .14), 0 4px 16px rgba(0, 0, 0, .06);
+      border-color: rgba(176, 255, 150, .45);
+      transform: translateY(-6px);
+    }
+
+    /* Orbs — more vibrant in day mode */
+    html:not(.dark) .orb-lime {
+      background: radial-gradient(circle, rgba(176, 255, 150, .40) 0%, transparent 70%);
+    }
+
+    html:not(.dark) .orb-cyan {
+      background: radial-gradient(circle, rgba(0, 224, 255, .22) 0%, transparent 70%);
+    }
+
+    html:not(.dark) .orb-orange {
+      background: radial-gradient(circle, rgba(254, 107, 0, .20) 0%, transparent 70%);
+    }
+
+    /* Hero H1 — remove neon glow, use deep rich ink instead */
+    html:not(.dark) .glow-lime-text {
+      text-shadow: none;
+      color: #1a1028;
+    }
+
+    /* Nav active link — keep lime accent visible on light */
+    html:not(.dark) .nav-link::after {
+      background: #7c3aed;
+    }
+
+    /* Features "why us" section premium light bg */
+    html:not(.dark) section#features {
+      background:
+        radial-gradient(ellipse 70% 50% at 90% 50%, rgba(0, 224, 255, .06) 0%, transparent 60%),
+        #f4f0ff;
+    }
+
+    /* Testimonial section premium light bg */
+    html:not(.dark) section.py-32.bg-\[\#f8f5ff\] {
+      background:
+        radial-gradient(ellipse 60% 80% at 50% 50%, rgba(254, 107, 0, .05) 0%, transparent 70%),
+        #fdf9f5;
+    }
+
+    /* Stats bar — cream white with subtle shadow */
+    html:not(.dark) section#stats {
+      background: #ffffff;
+      box-shadow: 0 2px 24px rgba(0, 0, 0, .06);
+    }
+
+    /* Premium gradient text stays visible in day mode */
+    html:not(.dark) .gradient-text {
+      background: linear-gradient(135deg, #22c55e 0%, #0891b2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Day mode — card accent line lime should adapt */
+    html:not(.dark) .accent-line-lime {
+      border-left: 4px solid #4ade80;
+    }
+
+    /* Pulse dot — stays lime on both modes, good */
+
+    /* Footer — rich deep navy in light (not pure black) */
+    html:not(.dark) footer.bg-black {
+      background: linear-gradient(135deg, #0f0a1e 0%, #1a1236 50%, #0c1a2e 100%) !important;
+    }
+
+    /* Remove hardcoded tel input backgrounds to allow wrappers to style properly */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    /* Chat messages bg in light mode */
+    html:not(.dark) #ai-chat-messages {
+      background: rgba(248, 245, 255, .95);
+    }
+
+    /* ── Always-dark elements: footer + overlay cards ──────────── */
+    /* Footer has dark bg in BOTH modes — force all text to be light */
+    footer .text-gray-900 {
+      color: rgba(255, 255, 255, 0.80) !important;
+    }
+
+    footer a.\[\#b0ff96\],
+    footer a:hover {
+      color: rgba(255, 255, 255, 1.0) !important;
+    }
+
+    html:not(.dark) footer a {
+      color: rgba(255, 255, 255, 0.55) !important;
+    }
+
+    html:not(.dark) footer a:hover {
+      color: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    html:not(.dark) footer span.material-symbols-outlined {
+      color: rgba(255, 255, 255, 0.55) !important;
+    }
+
+    html:not(.dark) footer div.text-gray-900 {
+      color: rgba(255, 255, 255, 0.60) !important;
+    }
+
+    html:not(.dark) footer span.text-gray-900 {
+      color: rgba(255, 255, 255, 0.88) !important;
+    }
+
+    /* Ingliz tili course card: dark navy overlay is ALWAYS present */
+    /* Force all text inside the dark-gradient card to be light */
+    html:not(.dark) [class*="row-span-2"] .text-gray-900 {
+      color: rgba(255, 255, 255, 0.92) !important;
+    }
+
+    /* Mentorship section (bg-[#fe6b00] orange — always) */
+    /* In light mode dark gray on orange is ok, but let's ensure headings pop */
+    html:not(.dark) .bg-\[\#fe6b00\] h3 {
+      color: #fff !important;
+    }
+
+    html:not(.dark) .bg-\[\#fe6b00\] p {
+      color: rgba(255, 255, 255, .85) !important;
+    }
+
+    /* Floating badges in hero (glass panels) - make label text readable */
+    html:not(.dark) .glass-panel .text-gray-900 {
+      color: #3b2f5e !important;
+    }
+
+    html:not(.dark) .glass-panel .dark\:text-white\/60,
+    html:not(.dark) .glass-panel .dark\:text-white\/50,
+    html:not(.dark) .glass-panel .dark\:text-white\/80 {
+      color: rgba(59, 47, 94, 0.75) !important;
+    }
+
+    /* Nav links in light mode: hover should be deep not white */
+    html:not(.dark) header .nav-link:not(.active):hover {
+      color: #1a1028 !important;
+    }
+
+    /* CTA section blue-50 bg — make sure labels & texts are truly readable */
+    html:not(.dark) .bg-blue-50 .text-gray-900 {
+      color: #1e1635 !important;
+    }
+  
